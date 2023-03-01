@@ -2,10 +2,10 @@ import React from 'react';
 
 import './Testemonials.scss';
 
-const Testemonials = () => {
+const Testimonials = () => {
   return (
     <div>Testemonials</div>
   )
 }
 
-export default Testemonials;
+export default Testimonials;

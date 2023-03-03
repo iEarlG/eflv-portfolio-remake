@@ -18,8 +18,8 @@
     align-items: center;
 
     img { 
-        width: 120px;
-        height: 100px;
+        width: 90px;
+        height: 20px;
 
         @media screen and (min-width: 2000px) {
             width: 140px;
@@ -34,9 +34,9 @@
     align-items: center;
     
     li { 
+        flex-direction: column;
         margin: 0 1rem;
         cursor: pointer;
-        flex-direction: column;
 
         div { 
             width: 5px;
@@ -46,7 +46,35 @@
             margin-bottom: 5px;
         }
         a { 
+            flex-direction: column;
             color: var(--gray-color);
+            font-weight: 500;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: var(--black-color);
+            }
+        }
+        &:hover {
+            div { 
+                background: var(--secondary-color);
+            }
         }
     }
+
+    @media screen and (max-width: 900px) {
+        display: none;
+    }
+}
+.app__navbar-menu { 
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    background: var(--gray-color);
 }

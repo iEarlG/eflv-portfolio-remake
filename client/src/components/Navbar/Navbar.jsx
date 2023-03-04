@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 
+import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { images } from '../../constants';
 import { navLinks } from '../../constants/data';
 
@@ -34,13 +34,15 @@ const Navbar = () => {
                 transition={{ duration: 0.85, ease: 'easeOut' }}
               >
                 <HiX onClick={() => setToggle(false)} />
-                {navLinks.map((nav) => (
-                  <li
-                    key={nav.id}
-                  >
-                    <a href={`#${nav.id}`} onClick={() => setToggle(false)}>{nav.title}</a>
-                  </li>
-                ))}
+                <ul>
+                  {navLinks.map((nav) => (
+                    <li
+                      key={nav.id}
+                    >
+                      <a href={`#${nav.id}`} onClick={() => setToggle(false)}>{nav.title}</a>
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             )}
       </div>

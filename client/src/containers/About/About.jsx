@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { urlFor, client } from '../../client';
 
 import './About.scss';
 
-const abouts = [
-  { title: 'Mobile & Web Design', description: 'I am passionate for designing your Web & Mobile Applications ideas.', imgUrl: ''},
-  { title: 'Frontend Development', description: 'I am passionate for building beautiful and interactive Web and Mobile Applications.', imgUrl: ''},
-  { title: 'Backend Development', description: 'I am a passionate level Beginner advanced backend support dev I have learned a lot, but I need someone to teach me even more', imgUrl: ''},
-  { title: 'Computer Literate', description: 'I have a knowledge and skills to be able to use computers; familiar with the operation of computers.', imgUrl: ''},
-]
-
 const About = () => {
+  const [abouts, setAbouts] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "abouts"]';
+
+    client.fetch(query)
+      .then((data) => setAbouts(data));
+  }, []);
+  
   return (
     <>
       <h2 className="head-text">I Know That <span>Good Devs & Designs </span> <br />

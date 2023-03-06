@@ -1,8 +1,19 @@
 import React from 'react';
 
-const NavigationDots = () => {
+import { navLinks } from '../constants/data';
+
+const NavigationDots = ({ active }) => {
   return (
-    <div>NavigationDots</div>
+    <div className="app__navigation">
+      {navLinks.map((nav, i) => (
+        <a
+          key={nav.id + i}
+          href={`#${nav.id}`}
+          className="app__navigation-dot"
+          style={active === nav.id ? {backgroundColor: '#0fac6a'} : {}}
+        />
+      ))}
+    </div>
   )
 }
 

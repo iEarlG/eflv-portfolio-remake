@@ -4,6 +4,8 @@ import git from '../assets/git.png';
 import javascript from '../assets/javascript.png';
 import react from '../assets/react.png';
 import bgIMG from '../assets/bgIMG.png';
+import email from '../assets/email.png';
+import mobile from '../assets/mobile.png';
 
 import abstractBG from '../assets/abstractBG.jpg';
 
@@ -16,6 +18,8 @@ export default {
     javascript,
     react,
     bgIMG,
+    email,
+    mobile,
     abstractBG,
     circle
 }
